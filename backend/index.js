@@ -1,10 +1,4 @@
-// imports
-import express from 'express';
-import bodyParser from 'body-parser';
-import cors from 'cors';
 
-// await mongodb
-await connectDB();
 
 // express
 const express = require('express');
@@ -21,7 +15,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 // listen del port
-require('./connection');
+require('./database/conexion');
 
 app.listen(port, () => {
     console.log(`Server corriendo en el ${port}`);

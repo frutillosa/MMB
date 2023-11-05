@@ -1,7 +1,6 @@
 {
   "name": "mmb",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "npm play test"
@@ -12,6 +11,7 @@
   },
   "author": "Dahiana Carneiro",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
@@ -19,5 +19,7 @@
     "express-handlebars": "^7.1.2",
     "mongodb": "^6.2.0",
     "mongoose": "^8.0.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
