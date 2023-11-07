@@ -1,18 +1,14 @@
 import mongoose from 'mongoose';
-const mongoose = require('mongoose');
 
-// Sustituir con la URL obtenida en MongoDB Atlas por otro token
-const urlDatabase = 'mongodb+srv://Admin:<9393>@grupo.1bbkcid.mongodb.net/?retryWrites=true&w=majority';
+// URL from Mongodb
+const urlDatabase = 'mongodb+srv://Monguito:12341234@grupo.1bbkcid.mongodb.net/?retryWrites=true&w=majority';
 
-export const connectDB = () => {
-  useUnifiedTopology = true,
-  useNewUrlParser = true
-  
-  return mongoose.connect(urlDatabase)
-    .then(() => {
-      console.log('Connected.');
-    })
-    .catch((error) => {
-      console.log('Error: ', error);
-    });
+const connectDB = () => {
+  mongoose.connect(urlDatabase,{})
+  .then(() => {
+    console.log('Conexión exitosa a la base de datos')})
+  .catch((error) => {
+    console.error('Error al conectar a la base de datos:', error);});
 };
+
+export default connectDB;

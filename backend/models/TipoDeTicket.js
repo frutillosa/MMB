@@ -8,4 +8,4 @@ const schemaTicket = new Schema({
   precio: { Number, required: true },
 });
 
-export const userTicket = model('Ticket', schemaTicket);
+export const modelTicket = model('Ticket', schemaTicket);

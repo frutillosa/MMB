@@ -1,22 +1,35 @@
+// IMPORTS POR LAS DUDAS SI SE EXPLOTA TODO
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import connectDB from './database/conexion.js'
+import { createNewEvento } from './Eventos/postNewEvento.js';
+import { listEventos } from './Eventos/listEventos.js';
+import { deleteEvento } from './Eventos/deleteEvento.js';
 
-
-// express
-const express = require('express');
-
-const app = express();
+// LLAMADO AL MONGO
 const port = 3000;
+connectDB();
 
-// cors
-const cors = require('cors');
+// USEFUL
+const app = express();
 app.use(cors());
-
-// body parser
-const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
-// listen del port
-require('./database/conexion');
 
+
+// ENDPOINTS
+// Crear nuevo evento
+app.post('/addNewEvento', createNewEvento);
+
+// Listado de eventos
+app.post('/listEventos', listEventos);
+
+// Borrar evento
+app.delete('/deleteEvento', deleteEvento);
+
+
+// LISTEN DEL SERVER
 app.listen(port, () => {
-    console.log(`Server corriendo en el ${port}`);
+    console.log(`Server corriendo en el ${port}!`);
 });

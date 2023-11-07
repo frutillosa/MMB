@@ -9,4 +9,4 @@ const schemaEvento = new Schema({
   descripcion: { String, required: true },
 });
 
-export const userEvento = model('Evento', schemaEvento);
+export const modelEvento = model('Evento', schemaEvento);
