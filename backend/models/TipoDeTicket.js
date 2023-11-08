@@ -4,8 +4,8 @@ const { Schema, model } = mongoose;
 
 const schemaTicket = new Schema({
   id: Number,
-  nombre: { String, required: true },
-  precio: { Number, required: true },
+  nombre: String,
+  precio: Number,
 });
 
 export const modelTicket = model('Ticket', schemaTicket);

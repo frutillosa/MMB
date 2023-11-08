@@ -10,5 +10,4 @@ export class ServerResponse {
     }
   }
 
-// Buscar evento en Base de datos - ARREGLAR ESTO
-export const filtroEvento = (value) => value ? new RegExp(value, 'gi') : undefined;
+

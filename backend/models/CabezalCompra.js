@@ -4,12 +4,12 @@ import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
 const schemaCompra = new Schema({
-  codigo: { String, required: true, unique: true },
+  codigo: { type: String, unique: true, required: true},
   id: Number,
-  nombre: { String, required: true },
-  telefono: { Number, required: true },
-  edad: { Number, required: true },
-  mediodepago: { String, required: true },
+  nombre: String,
+  telefono: Number,
+  edad: Number,
+  mediodepago: String,
 });
 
 export const modelCompra = model('Compra', schemaCompra);
