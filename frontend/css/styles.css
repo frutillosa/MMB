@@ -1,0 +1,36 @@
+/* GLOBALES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SegoeUI', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    background-color: var(--Blanco);
+}
+
+:root{
+    --Dorado: #B59B79;
+    --Negro: #000;
+    --Blanco: #fafafa;
+}
+
+/* HEADER */
+
+/* esto lo pongo acá pero tendria que ir en el js */
+#header{
+    background: url(../img/samurai-portada.png) center center no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+.nav-item{
+    background-color:#B59B79 !important;
+    border-radius: 20px;
+}
+
+.nav-link{
+    color:#000000 !important;
+}

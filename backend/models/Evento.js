@@ -8,6 +8,7 @@ const schemaEvento = new Schema({
   fecha: { type: Date, unique: true },
   descripcion: String,
   img: String,
+  portada: String,
 });
 
 export const modelEvento = model('Evento', schemaEvento);

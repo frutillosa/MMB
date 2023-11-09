@@ -15,6 +15,8 @@ export const createNewEvento = (req, res) => {
 		nombre: req.body.nombre,
 		fecha: req.body.fecha,
 		descripcion: req.body.descripcion,
+		img: req.body.img,
+		portada: req.body.portada,
 	});
 
 	instEvento.save()
