@@ -1,36 +1,174 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap');
+
 /* GLOBALES */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'SegoeUI', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
+
+main{
+    background-color: var(--black);
+    }
 
 html{
     scroll-behavior: smooth;
-    background-color: var(--Blanco);
+    background-color: var(--white);
 }
 
-:root{
-    --Dorado: #B59B79;
-    --Negro: #000;
-    --Blanco: #fafafa;
+.flexcenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* COLORES */
+:root {
+    --black: #151515;
+    --gold: #B59B79;
+    --focus: #E2A555;
+    --white: #fafafa;
+  }
+
+
+/* BOTONES */
+/* btn principal */
+.btnPrincipal {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: #E2A555;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    margin: 1rem;
+  }
+  
+  .btnPrincipal:hover {
+    transform: scale(1.05);
+  }
+  
+  .btnPrincipal:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .btnPrincipal::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+
+/* btn menu */
+
+.btnMenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: var(--gold);
+    color: var(--black);
+    padding: 0.5rem;
+    border-radius: 100px;
+    font-size: 16px;
+}
+
+.btnMenu:hover{
+    background-color: #927146;
 }
 
 /* HEADER */
 
-/* esto lo pongo acá pero tendria que ir en el js */
 #header{
-    background: url(../img/samurai-portada.png) center center no-repeat;
+    background: center center no-repeat;
     background-size: cover;
     height: 90vh;
 }
 
-.nav-item{
-    background-color:#B59B79 !important;
-    border-radius: 20px;
+nav{
+    align-content: center;
+    gap: 0.5rem 0.3rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    margin: 0 0.5rem;
 }
 
-.nav-link{
-    color:#000000 !important;
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    margin: 0.5rem 0;
+    width: 137px;
+    height: 66px;
+}
+
+
+#fechaPrincipal{
+    margin: 1rem 0;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 3.5rem;
+    text-align: center;
+    line-height: 2.9rem;
+
+    width: 125px;
+    height: 128px;
+}
+
+#txtPrincipal{
+    color: var(--white);
+    margin: 0 5vw;
+}
+
+#fechaPrincipal span{
+    font-size: 2rem;
+}
+
+h1{
+    color: var(--white);
+    font-size: 48px;
+    font-style: normal;
+    text-transform: uppercase;
 }
