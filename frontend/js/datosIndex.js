@@ -7,6 +7,7 @@ window.onload = () => {
         .then(response => response.json())
         .then(data => {
           console.log('Listado de eventos:', data);
+        // ACA VAN LAS COSAS QUE TIENEN QUE CARGAR
           getHeader(data.message);
         })
         .catch(error => {
@@ -14,6 +15,7 @@ window.onload = () => {
         });
 
 };
+
 
 const getHeader = (data) => {
     const header = document.getElementById('header');
@@ -43,7 +45,7 @@ const getHeader = (data) => {
                         </div>
                     <h1>${element['nombre']}</h1>
                     <p>21:00</p>
-                    <p>${element['descripcion']}</p>
+                    <p class="subtitulo">${element['descripcion']}</p>
                     <a class="btnPrincipal" href="">Comprar entradas</a>
                 </div>
 
@@ -58,4 +60,16 @@ const getHeader = (data) => {
     header.innerHTML = html;
 };
 
+const getEventos = (data) => {
+    const listado = document.getElementById('listado');
+    let html = '';
+    for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        console.log(element);
+        html += `
+                <div class="evento">
+        `
+    }
 
+    listado.innerHTML = html;
+};
