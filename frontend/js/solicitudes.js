@@ -24,7 +24,7 @@ const nuevoEvento = {
   
   // Listar eventos
   fetch('/listEventos', {
-    method: 'POST'
+    method: 'GET'
   })
     .then(response => response.json())
     .then(data => {

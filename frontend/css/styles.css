@@ -1,7 +1,7 @@
-/* FONTS */
+/* ------------ IMPORTS ------------- */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap');
 
-/* GLOBALES */
+/* ------------ GLOBALES ------------- */
 *{
     margin: 0;
     padding: 0;
@@ -11,6 +11,9 @@
 
 html{
   scroll-behavior: smooth;
+}
+
+main{
   background-color: var(--black);
 }
 
@@ -20,20 +23,48 @@ html{
     align-items: center;
 }
 
-/* TEXTO */
+/* ------------ TEXTO ------------- */
 
 h1{
   color: var(--white);
   font-size: 48px;
-  font-style: normal;
   text-transform: uppercase;
 }
 
+h2{
+  color: var(--focus);
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3{
+  color: var(--white);
+  font-size: 36px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px #000;
+}
+
+p{
+  color: var(--white);
+  font-size: 16px;
+}
+
+a{
+  text-decoration: none;
+}
+
 .subtitulo{
+  color: var(--white);
   font-size: 24px;
 }
 
-/* COLORES */
+.detalles{
+  color: var(--white);
+  font-size: 14px;
+}
+
+/* ------------ COLORES ------------- */
 :root {
     --black: #151515;
     --gold: #B59B79;
@@ -42,7 +73,7 @@ h1{
   }
 
 
-/* BOTONES */
+/* ------------ BOTONES ------------- */
 /* btn principal */
 .btnPrincipal {
     position: relative;
@@ -124,7 +155,50 @@ h1{
     background-color: #927146;
 }
 
-/* HEADER */
+/* ----------- INPUTS ------------ */
+
+/* input buscar */
+.group {
+  display: flex;
+  line-height: 1.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 45px;
+  line-height: 1.5rem;
+  padding: 0 5rem;
+  padding-left: 3rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f8fafc;
+  color: #0d0c22;
+  transition: .5s ease;
+}
+
+.input::placeholder {
+  color: var(--gold);
+}
+
+.input:focus, input:hover {
+  outline: none;
+  border-color: var(--focus);
+  background-color: #fff;
+  box-shadow: 0 0 0 5px rgba(143, 96, 0, 0.3);
+}
+
+.icon {
+  position: absolute;
+  right: 1rem;
+  fill: none;
+  width: 1rem;
+  height: 1rem;
+}
+
+/*------------ INDEX - HEADER -------------*/
 
 
 #header{
@@ -133,6 +207,7 @@ h1{
     height: 90vh;
 }
 
+/* NAVBAR */
 nav{
     align-content: center;
     gap: 0.5rem 0.3rem;
@@ -152,7 +227,7 @@ nav{
     height: 66px;
 }
 
-
+/* ------------ INDEX - PRINCIPAL ------------- */
 #fechaPrincipal{
     margin: 1rem 0;
     background-color: var(--black);
@@ -181,12 +256,136 @@ nav{
 }
 
 
-/* DESTACADOS */
-
-#destacado{
-  margin: 1rem 0;
+/* ------------ INDEX - DESTACADOS ------------- */
+#destacados{
+  margin: 1rem 1rem;
   border-radius: 10px;
   background: var(--black);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.50);
   backdrop-filter: blur(10px);
+
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eventoDestacado{
+  padding: 1rem;
+  border-radius: 10px;
+  width: 18rem;
+  height: 18rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.txtDestacado{
+  justify-content: flex-start;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.fechaDestacado{
+    margin: 1rem 0;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 2.25rem;
+    text-align: center;
+    line-height: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 5.25rem;
+    height: 5.25rem;
+}
+
+.fechaDestacado span{
+  font-size: 1.5rem;
+}
+
+/* ------------ INDEX - NUESTRA SALA ------------- */
+#nuestrasala{
+  margin: 1rem;
+}
+
+.txtSala{
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.mapa{
+  margin: 2rem 0;
+  position: relative;
+  height: 50vh;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.mapa iframe{
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  mix-blend-mode: luminosity;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ------------ FOOTER ------------- */
+footer{
+  margin: 10vh 0 0 0;
+  background-color: var(--gold);
+  padding: 1rem;
+}
+
+.txtFooter{
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.txtFooter p{
+  color: #000;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.txtFooter div{
+  gap: 1rem;
+}
+
+.txtFooter img{
+  width: 3rem;
+}
+
+.marca{
+  color: rgba(21, 21, 21, 0.50);
+  text-align: center;
+  margin: 1rem;
+}
+
+
+
+/* ------------ LA SALA ------------- */
+
+#carouselExampleCaptions{
+  margin: 4rem 1rem;
+}
+
+#carouselExampleCaptions img{
+  height: 50vh;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+#info{
+  gap: 1rem;
+  flex-direction: column;
+  margin: 1rem;
 }

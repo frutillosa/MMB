@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HTML: Agrega un campo de entrada para el filtro de eventos del mes -->
+<input type="text" id="filtroMes" placeholder="Buscar eventos para este mes">
+
+<!-- JavaScript: Utiliza JavaScript puro para manejar el evento keyup y realizar la búsqueda -->
+<script>
+  // Variable para almacenar la lista completa de eventos
+  let eventos = [];
+
+  // Función para cargar la lista completa de eventos
+  const cargarEventos = async () => {
+    try {
+      const response = await fetch('/listEventos'); // Reemplaza con la ruta correcta de tu servidor
+      eventos = await response.json();
+      console.log('Eventos cargados:', eventos);
+    } catch (error) {
+      console.error('Error al cargar eventos:', error);
+    }
+  };
+
+  // Función para obtener el primer día del mes actual
+  const primerDiaDelMes = () => {
+    const fecha = new Date();
+    fecha.setDate(1);
+    return fecha;
+  };
+
+  // Función para obtener el último día del mes actual
+  const ultimoDiaDelMes = () => {
+    const fecha = new Date();
+    fecha.setMonth(fecha.getMonth() + 1);
+    fecha.setDate(0);
+    return fecha;
+  };
+
+  // Función para manejar el evento keyup en el campo de filtro de eventos del mes
+  const manejarFiltroMes = () => {
+    // Obtener el valor del campo de filtro de eventos del mes
+    const searchTerm = document.getElementById('filtroMes').value.toLowerCase();
+
+    // Obtener el rango de fechas del mes actual
+    const primerDia = primerDiaDelMes();
+    const ultimoDia = ultimoDiaDelMes();
+
+    // Filtrar los eventos en función del término de búsqueda y el rango de fechas
+    const eventosFiltrados = eventos.filter(evento => {
+      // Convertir la fecha del evento a un objeto Date
+      const fechaEvento = new Date(evento.fecha);
+
+      // Verificar si la fecha del evento está dentro del rango del mes actual
+      return (
+        fechaEvento >= primerDia &&
+        fechaEvento <= ultimoDia &&
+        (evento.nombre.toLowerCase().includes(searchTerm) ||
+          evento.descripcion.toLowerCase().includes(searchTerm))
+      );
+    });
+
+    // Mostrar los resultados filtrados o realizar otras acciones según sea necesario
+    console.log('Eventos filtrados para este mes:', eventosFiltrados);
+
+    // Puedes actualizar tu interfaz de usuario con los resultados filtrados aquí
+    // Por ejemplo, renderizar una lista actualizada de eventos en la pantalla
+  };
+
+  // Llamar a la función para cargar eventos al cargar la página
+  document.addEventListener('DOMContentLoaded', () => {
+    cargarEventos();
+
+    // Manejar el evento keyup en el campo de filtro de eventos del mes
+    document.getElementById('filtroMes').addEventListener('keyup', manejarFiltroMes);
+  });
+</script>
+
+</body>
+</html>

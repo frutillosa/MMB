@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.post('/addNewEvento', createNewEvento);
 
 // Listado de eventos
-app.post('/listEventos', listEventos);
+app.get('/listEventos', listEventos);
 
 // Borrar evento
 app.delete('/deleteEvento', deleteEvento);
