@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,12 @@
     <link href="img/favicon.png" rel="icon" type="image/x-icon">
     <title>Montevideo Music Box - Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js">
+    </script>
+    <script src="../MMB-Frontend/js/convertidores.js"></script>
     <script src="../MMB-Frontend/js/datosIndex.js"></script>
 </head>
+
 <body>
     <main>
         <!-- HEADER -->
@@ -19,42 +24,23 @@
                     <a class="logo" href="index.html">
                         <img src="img/logo.png" alt="MMB">
                     </a>
-                    
+
                     <nav class="flexcenter">
-                        <a class="btnMenu" href="/eventos">EVENTOS</a>
-                        <a class="btnMenu" href="/lasala">LA SALA</a>
-                        <a class="btnMenu" href="/contacto">CONTACTO</a>
+                        <a class="btnMenu" href="eventos.html">EVENTOS</a>
+                        <a class="btnMenu" href="lasala.html">LA SALA</a>
+                        <a class="btnMenu" href="contacto.html">CONTACTO</a>
                     </nav>
                 </div>
             </header>
-            <!-- <header>
-                <div>
-                    <a class="logo" href="/">
-                        <img src="img/logo.png" alt="MMB">
-                    </a>
-                    
-                    <ul>
-                        <li class="nav-item"><a href="eventos.html">EVENTOS</a></li>
-                        <li class="nav-item"><a href="lasala.html">LA SALA</a></li>
-                        <li class="nav-item"><a href="contacto.html">CONTACTO</a></li>
-                    </ul>
-                </div>
-            </header>
-
-            <div id="txtPrincipal">
-                <h1>Hola</h1>
-                <p>La hora</p>
-                <p>Aca va descripcion</p>
-                <a class="btnPrincipal" href="">Un boton</a>
-            </div> -->
+            <!-- getPrincipal -->
         </div>
 
         <!-- EVENTOS -->
-        <section id="destacados" class="flexcenter">
+        <section id="destacados" class="flexcenter direction">
             <h2>PROXIMOS EVENTOS</h2>
-            <div class="eventoDestacado" style="background-image: url(img/anthrax.png); background-size: contain;">
+            <div class="eventoDestacado" style="background-image: url(img/anthrax.png); background-size: cover;">
                 <div class="txtDestacado flexcenter">
-                    <div class="fechaDestacado">
+                    <div class="fechaDestacado flexcenter">
                         06
                         <span>OCT</span>
                     </div>
@@ -64,9 +50,9 @@
                     </div>
                 </div>
             </div>
-            <div class="eventoDestacado" style="background-image: url(img/samurai.png); background-size: contain;">
+            <div class="eventoDestacado" style="background-image: url(img/samurai.png); background-size: cover;">
                 <div class="txtDestacado flexcenter">
-                    <div class="fechaDestacado">
+                    <div class="fechaDestacado flexcenter">
                         06
                         <span>OCT</span>
                     </div>
@@ -81,22 +67,23 @@
 
         <!-- NUESTRA SALA -->
         <section id="nuestrasala">
-            <div class="txtSala flexcenter">
+            <div class="txtSala flexcenter direction">
                 <h2>NUESTRA SALA</h2>
                 <h3>EVENTOS ÚNICOS</h3>
-                <p>Esta versátil sala de eventos musicales ofrece un espacio excepcional que puede ser adaptado para una amplia variedad de ocasiones. Ya sea para conciertos en vivo, bailes, convenciones o cualquier otro evento especial, nuestro lugar se transforma según sus necesidades. Equipado con tecnología de vanguardia y una acústica excepcional, garantizamos una experiencia inolvidable en cada ocasión.</p>
+                <p>Esta versátil sala de eventos musicales ofrece un espacio excepcional que puede ser adaptado para una amplia variedad de ocasiones. Ya sea para conciertos en vivo, bailes, convenciones o cualquier otro evento especial, nuestro lugar se
+                    transforma según sus necesidades. Equipado con tecnología de vanguardia y una acústica excepcional, garantizamos una experiencia inolvidable en cada ocasión.</p>
                 <a class="btnPrincipal" href="">ver más</a>
             </div>
             <div class="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.0236003187965!2d-56.15376432365263!3d-34.88075367796451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80709572aaf5%3A0xfd883d14b34d36f1!2sMontevideo%20Music%20Box!5e0!3m2!1ses-419!2suy!4v1701698860856!5m2!1ses-419!2suy" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.0236003187965!2d-56.15376432365263!3d-34.88075367796451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80709572aaf5%3A0xfd883d14b34d36f1!2sMontevideo%20Music%20Box!5e0!3m2!1ses-419!2suy!4v1701698860856!5m2!1ses-419!2suy"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
+        <!-- FOOTER -->
         <footer>
-            <div class="txtFooter flexcenter">
-                <p>Av. Dámaso Antonio Larrañaga 3195 esq. Joanicó
-                    2484 0712 - Lunes a Viernes de 13:30 a 17:30
-                    contacto@montevideomusicbox.com.uy
+            <div class="txtFooter flexcenter direction">
+                <p>Av. Dámaso Antonio Larrañaga 3195 esq. Joanicó 2484 0712 - Lunes a Viernes de 13:30 a 17:30 contacto@montevideomusicbox.com.uy
                 </p>
                 <div class="flexcenter">
                     <a href="https://www.facebook.com/MontevideoMusicBox">
@@ -120,4 +107,5 @@
 
     </main>
 </body>
+
 </html>

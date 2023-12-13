@@ -8,42 +8,52 @@
     <link href="img/favicon.png" rel="icon" type="image/x-icon">
     <title>Montevideo Music Box - Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="../MMB-Frontend/js/datosIndex.js"></script>
 </head>
 <body>
     <main>
         <!-- HEADER -->
-            <header>
-                <div>
-                    <a class="logo" href="index.html">
-                        <img src="img/logo.png" alt="MMB">
-                    </a>
+        <header>
+            <div>
+                <a class="logo" href="index.html">
+                    <img src="img/logo.png" alt="MMB">
+                </a>
+                
+                <nav class="flexcenter">
+                    <a class="btnMenu" href="eventos.html">EVENTOS</a>
+                    <a class="btnMenu" href="lasala.html">LA SALA</a>
+                    <a class="btnMenu" href="contacto.html">CONTACTO</a>
                     
-                    <nav class="flexcenter">
-                        <a class="btnMenu" href="/eventos">EVENTOS</a>
-                        <a class="btnMenu" href="/lasala">LA SALA</a>
-                        <a class="btnMenu" href="/contacto">CONTACTO</a>
-
-                        <div class="group">
-                            <input class="input" type="text" placeholder="BUSCAR">
-                            <img src="icons/search.svg" alt="" class="icon">
-                        </div>
-                    </nav>
-                    
-                </div>
-            </header>
-
+                    <div class="group">
+                        <input class="input" type="text" placeholder="BUSCAR">
+                        <img src="icons/search.svg" alt="" class="icon">
+                    </div>
+                </nav>
+                
+            </div>
+        </header>
         
-
+        
         <!-- LISTADO -->
-        <h1>EVENTOS</h1>
-        <div>aca irian los filtros</div>
         <section id="listado">
-            <!-- ACA VAN LOS EVENTOS -->
+            <h1>EVENTOS</h1>
+            <div class="group">
+                <select class="input" name="filtrosFecha" id="filtrosFecha">
+                    <option value="semana">Todos los eventos</option>
+                    <option value="semana">Esta semana</option>
+                    <option value="mes">Este mes</option>
+                    <option value="ano">Este año</option>
+                </select>
+            </div>
+            <br>
+            <div id="contListado" class="flexcenter direction">
+                <!-- ACA VAN LOS EVENTOS -->
+            </div>
         </section>
-
+        
+        
+        <!-- FOOTER -->
         <footer>
-            <div class="txtFooter flexcenter">
+            <div class="txtFooter flexcenter direction">
                 <p>Av. Dámaso Antonio Larrañaga 3195 esq. Joanicó
                     2484 0712 - Lunes a Viernes de 13:30 a 17:30
                     contacto@montevideomusicbox.com.uy
@@ -67,7 +77,8 @@
                 Montevideo Music Box© 2023
             </p>
         </footer>
-
+        
     </main>
+    <script src="../MMB-Frontend/js/datosEventos.js"></script>
 </body>
 </html>

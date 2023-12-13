@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="montevideo, music, box, mmbox, lachina, rock, sala, concierto">
+    <meta name="description" content="Montevideo Music Box">
+    <link href="img/favicon.png" rel="icon" type="image/x-icon">
+    <title>Montevideo Music Box - Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js">
+    </script>
+</head>
+
+<body>
+    <main>
+        <!-- HEADER -->
+        <header>
+            <div>
+                <a class="logo" href="index.html">
+                    <img src="img/logo.png" alt="MMB">
+                </a>
+
+                <nav class="flexcenter">
+                    <a class="btnMenu" href="eventos.html">EVENTOS</a>
+                    <a class="btnMenu" href="lasala.html">LA SALA</a>
+                    <a class="btnMenu" href="contacto.html">CONTACTO</a>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- 1 DETALLES -->
+        <section id="detalles">
+            <figure class="figure">
+                <img class="img" src="img/anthrax.png" alt="Mapa del Local">
+            </figure>
+
+            <div class="infoDetalles flexcenter direction">
+                <div class="fechaPrincipal">
+                    06
+                    <span class="mes">OCT</span>
+                </div>
+                <h1>Samurai</h1>
+                <p class="hora subtitulo">21:00</p>
+                <p>Samurai, la legendaria banda musical que fusiona la pasión del rock con la esencia de la tradición japonesa, creando un sonido totalmente único.</p>
+            </div>
+
+            <div class="total flexcenter">
+                <p class="subtitulo">TOTAL</p>
+                <p class="subtitulo">$$$$</p>
+            </div>
+
+            <div class="btnLeft flexcenter">
+                <a href="" class="btnPrincipal">Comprar</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 2 COMPRA -->
+        <section id="detalles">
+            <figure class="figure">
+                <img class="img" src="img/anthrax.png" alt="Mapa del Local">
+            </figure>
+
+            <div class="infoDetalles flexcenter direction">
+                <div class="fechaPrincipal">
+                    06
+                    <span class="mes">OCT</span>
+                </div>
+                <h1>Samurai</h1>
+                <p class="hora subtitulo">21:00</p>
+                <p>Samurai, la legendaria banda musical que fusiona la pasión del rock con la esencia de la tradición japonesa, creando un sonido totalmente único.</p>
+
+                <!-- ACA IRIA TODO LO DE COMPRA DE LA ENTRADA -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Tipo de ticket</th>
+                            <th>Valor</th>
+                            <th>Cant.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>General</td>
+                            <td>$$$$</td>
+                            <td>
+                                <select name="cantTicket" id="cantTicket" class="input">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>VIP</td>
+                            <td>$$$$</td>
+                            <td>
+                                <select name="cantTicket" id="cantTicket" class="input">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="total flexcenter">
+                <p class="subtitulo">TOTAL</p>
+                <p class="subtitulo">$$$$</p>
+            </div>
+
+            <div class="btnLeft flexcenter">
+                <a href="" class="btnPrincipal">Confirmar</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 3 FORM -->
+        <section id="detalles">
+
+            <div class="infoDetalles">
+                <div class="fechaPrincipal">
+                    06
+                    <span class="mes">OCT</span>
+                </div>
+                <h1>Samurai</h1>
+                <p class="hora subtitulo">21:00</p>
+
+                <form action="GET">
+                    <div class="group">
+                        <input class="input" type="text" placeholder="Nombre completo">
+                    </div>
+                    <div class="group">
+                        <input class="input" type="text" placeholder="Teléfono">
+                    </div>
+                    <div class="group">
+                        <input class="input" type="text" placeholder="Email">
+                    </div>
+                    <div class="group">
+                        <input class="input" type="text" placeholder="Documento">
+                    </div>
+                    <div id="contDate" class="group">
+                        <label for="date" class="p">Fecha de nacimiento</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                </form>
+            </div>
+
+            <div class="total flexcenter">
+                <p class="subtitulo">TOTAL</p>
+                <p class="subtitulo">$$$$</p>
+            </div>
+
+            <div class="btnLeft flexcenter">
+                <a href="">
+                    <img src="icons/arrow-circle-right.png" alt="">
+                </a>
+
+                <a href="" class="btnPrincipal">Siguiente</a>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <!-- 4 MEDIO DE PAGO -->
+        <section id="detalles">
+
+            <div class="infoDetalles">
+                <div class="fechaPrincipal">
+                    06
+                    <span class="mes">OCT</span>
+                </div>
+                <h1>Samurai</h1>
+                <p class="hora subtitulo">21:00</p>
+
+                <form action="GET">
+                    <div class="flexcenter radioOptions">
+
+                        <div class="radio-container">
+                            <input type="radio" id="radioMP" name="metodoPago" value="mercadopago">
+                            <label for="radioMP" class="p">
+                                <img src="icons/mercadopago.png" alt="Imagen de ejemplo" class="radio-img">
+                            </label>
+                            <p class="detalles">Mercado Pago <br> 12 Cuotas sin recargo con todas las tarjetas</p>
+                        </div>
+                        <div class="radio-container">
+                            <input type="radio" id="radioRP" name="metodoPago" value="redpagos">
+                            <label for="radioRP" class="p">
+                                <img src="icons/redpagos.png" alt="Imagen de ejemplo" class="radio-img">
+                            </label>
+                            <p class="detalles">Red Pagos <br> Pagar en dentro de las 24hrs en Local</p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="total flexcenter">
+                <p class="subtitulo">TOTAL</p>
+                <p class="subtitulo">$$$$</p>
+            </div>
+
+            <div class="btnLeft flexcenter">
+                <a href="">
+                    <img src="icons/arrow-circle-right.png" alt="">
+                </a>
+
+                <a href="" class="btnPrincipal">Siguiente</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 5 VERIFICACION -->
+        <section id="detalles">
+
+            <div class="infoDetalles">
+                <div class="fechaPrincipal">
+                    06
+                    <span class="mes">OCT</span>
+                </div>
+                <h1>Samurai</h1>
+                <p class="hora subtitulo">21:00</p>
+
+                <div class="verificacion flexcenter">
+                    <p>Verificando pago</p>
+                    <img src="icons/verified.gif" alt="">
+                </div>
+
+            </div>
+
+            <div class="total flexcenter">
+                <p class="subtitulo">TOTAL</p>
+                <p class="subtitulo">$$$$</p>
+            </div>
+
+            <div class="btnLeft flexcenter">
+                <a href="">
+                    <img src="icons/arrow-circle-right.png" alt="">
+                </a>
+
+                <a href="" class="btnPrincipal">Siguiente</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 6 FINAL -->
+        <section id="detalles">
+
+            <div class="infoDetalles">
+                <div class="fechaPrincipal">
+                    06
+                    <span class="mes">OCT</span>
+                </div>
+                <h1>Samurai</h1>
+                <p class="hora subtitulo">21:00</p>
+
+                <div class="qr flexcenter">
+                    <p id="ticket">General x 1</p>
+                    <div id="qrcode"></div>
+                    <p id="codigo" class="subtitulo">#ERS1256</p>
+                    <p class="subtitulo">Enviada con éxito</p>
+                    <p class="detalles">Guarda la foto o realiza una screenshot para tener el código QR en el momento de entrar al evento. Se debe tener en cuenta que puede ser utilizado una única vez.</p>
+                </div>
+
+            </div>
+
+            <div class="flexcenter">
+                <a href="" class="btnSimple">Volver al inicio</a>
+            </div>
+        </section>
+
+
+
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="txtFooter flexcenter direction">
+                <p>Av. Dámaso Antonio Larrañaga 3195 esq. Joanicó 2484 0712 - Lunes a Viernes de 13:30 a 17:30 contacto@montevideomusicbox.com.uy
+                </p>
+                <div class="flexcenter">
+                    <a href="https://www.facebook.com/MontevideoMusicBox">
+                        <img src="icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/montevideomusicbox/">
+                        <img src="icons/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.youtube.com/@MontevideoMusicBox">
+                        <img src="icons/youtube.svg" alt="YouTube">
+                    </a>
+                    <a href="https://twitter.com/MMusicBox">
+                        <img src="icons/twitter.svg" alt="X">
+                    </a>
+                </div>
+            </div>
+            <p class="marca detalles">
+                Montevideo Music Box© 2023
+            </p>
+        </footer>
+
+    </main>
+
+
+</body>
+
+</html>

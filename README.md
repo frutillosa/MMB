@@ -33,8 +33,5 @@ El servidor ya está corriendo y listo para recibir requests. Puedes utilizar Po
 ## Endpoints disponibles
 
 * POST /addNewEvento
-* POST /listEventos
+* GET /listEventos
 * DELETE /deleteEvento
-
-
-

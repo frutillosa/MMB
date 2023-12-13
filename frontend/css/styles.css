@@ -23,12 +23,17 @@ main{
     align-items: center;
 }
 
+.direction{
+  flex-direction: column;
+}
+
 /* ------------ TEXTO ------------- */
 
 h1{
   color: var(--white);
   font-size: 48px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 h2{
@@ -45,7 +50,7 @@ h3{
   text-shadow: 0px 0px 5px #000;
 }
 
-p{
+p, .p{
   color: var(--white);
   font-size: 16px;
 }
@@ -62,6 +67,7 @@ a{
 .detalles{
   color: var(--white);
   font-size: 14px;
+  text-align: justify;
 }
 
 /* ------------ COLORES ------------- */
@@ -73,30 +79,45 @@ a{
   }
 
 
+/* ------------ IMAGENES ------------- */
+.figure{
+  position: relative;
+  margin: 1rem 0;
+  height: 45vh;
+  border-radius: 10px;
+}
+
+.img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 /* ------------ BOTONES ------------- */
 /* btn principal */
 .btnPrincipal {
     position: relative;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    padding-block: 0.5rem;
-    padding-inline: 1.25rem;
-    background-color: #E2A555;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    background-color: var(--focus);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #000;
     gap: 10px;
-    font-weight: bold;
-    border: 3px solid #ffffff4d;
+    border: 2px solid #ffffff4d;
     outline: none;
     overflow: hidden;
-    font-size: 24px;
+    font-size: 1.2rem;
     text-decoration: none;
     text-transform: uppercase;
-
-    margin: 1rem;
   }
   
   .btnPrincipal:hover {
@@ -115,12 +136,12 @@ a{
     background-image: linear-gradient(
       120deg,
       rgba(255, 255, 255, 0) 30%,
-      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.9),
       rgba(255, 255, 255, 0) 70%
     );
     top: 0;
     left: -100px;
-    opacity: 0.6;
+    opacity: 0.5;
   }
   
   @keyframes shine {
@@ -155,42 +176,72 @@ a{
     background-color: #927146;
 }
 
+.btnSimple{
+  color: var(--focus);
+  position: relative;
+  display: flex;
+  font-size: .9rem;
+  text-decoration: none;
+  margin: 1rem 0;
+}
+
+.btnSimple:hover{
+  color: var(--focus);
+}
+
+.btnSimple::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--focus);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.btnSimple:hover::after {
+  width: 100%;
+}
+
 /* ----------- INPUTS ------------ */
 
+/* forms */
+form div{
+  margin: 1rem 0;
+}
+
 /* input buscar */
-.group {
+.group{
   display: flex;
-  line-height: 1.5rem;
   align-items: center;
   position: relative;
 }
 
-.input {
+.input, input[type="date"]{
   width: 100%;
   height: 45px;
-  line-height: 1.5rem;
-  padding: 0 5rem;
-  padding-left: 3rem;
+  line-height: 3rem;
+  padding: 0 1rem;
   border: 2px solid transparent;
   border-radius: 10px;
   outline: none;
-  background-color: #f8fafc;
-  color: #0d0c22;
+  background-color: var(--white);
+  color: var(--black);
   transition: .5s ease;
 }
 
-.input::placeholder {
+.input::placeholder, input[type="date"]::placeholder{
   color: var(--gold);
 }
 
-.input:focus, input:hover {
+.input:focus, input:hover, input[type="date"]:focus, input[type="date"]:hover{
   outline: none;
   border-color: var(--focus);
-  background-color: #fff;
-  box-shadow: 0 0 0 5px rgba(143, 96, 0, 0.3);
+  box-shadow: 0 0 0 5px rgba(143, 96, 0, 0.5);
 }
 
-.icon {
+.icon{
   position: absolute;
   right: 1rem;
   fill: none;
@@ -200,7 +251,6 @@ a{
 
 /*------------ INDEX - HEADER -------------*/
 
-
 #header{
     background: center center no-repeat;
     background-size: cover;
@@ -209,11 +259,10 @@ a{
 
 /* NAVBAR */
 nav{
-    align-content: center;
-    gap: 0.5rem 0.3rem;
+    gap: 0.5rem;
     flex-shrink: 0;
     flex-wrap: wrap;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
 }
 
 .logo{
@@ -228,31 +277,28 @@ nav{
 }
 
 /* ------------ INDEX - PRINCIPAL ------------- */
-#fechaPrincipal{
+.fechaPrincipal{
     margin: 1rem 0;
     background-color: var(--black);
     color: var(--white);
     padding: 0.5rem;
     border-radius: 10px;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
-    line-height: 3rem;
+    line-height: 2.5rem;
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.50);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 125px;
-    height: 128px;
+    width: 6rem;
+    height: 6rem;
 }
 
-#txtPrincipal{
+.txtPrincipal{
     color: var(--white);
     margin: 20vh 0 0 5vw;
 }
 
-#fechaPrincipal span{
-    font-size: 2.3rem;
+.fechaPrincipal span{
+    font-size: 2rem;
 }
 
 
@@ -263,15 +309,15 @@ nav{
   background: var(--black);
   box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.50);
   backdrop-filter: blur(10px);
+  padding: 1rem;
 
-  flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .eventoDestacado{
   padding: 1rem;
   border-radius: 10px;
-  width: 18rem;
+  width: 100%;
   height: 18rem;
 
   display: flex;
@@ -294,11 +340,8 @@ nav{
     font-size: 2.25rem;
     text-align: center;
     line-height: 2rem;
-
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     width: 5.25rem;
     height: 5.25rem;
 }
@@ -307,13 +350,13 @@ nav{
   font-size: 1.5rem;
 }
 
+
 /* ------------ INDEX - NUESTRA SALA ------------- */
 #nuestrasala{
   margin: 1rem;
 }
 
 .txtSala{
-  flex-direction: column;
   gap: 2.5rem;
 }
 
@@ -346,7 +389,6 @@ footer{
 
 .txtFooter{
   justify-content: space-between;
-  flex-direction: column;
   gap: 1rem;
 }
 
@@ -381,11 +423,201 @@ footer{
 #carouselExampleCaptions img{
   height: 50vh;
   border-radius: 10px;
-  background-size: cover;
+  object-fit: cover;
 }
 
-#info{
+#info div{
   gap: 1rem;
   flex-direction: column;
   margin: 1rem;
+}
+
+#info figure{
+  display: block;
+}
+
+#marcas{
+  gap: 1rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+/* ----------- CONTACTO ------------- */
+
+#form{
+  margin: 1rem;
+}
+
+#servicios{
+  gap: 1rem;
+  flex-direction: column;
+  flex: 0 0 0 500px;
+  flex-wrap: wrap;
+  margin: 1rem;
+  text-align: center;
+}
+
+.contacto{
+  gap: 1rem;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  margin: 1rem;
+  text-align: left;
+}
+
+.contacto div{
+  gap: 1rem;
+}
+
+.contacto p{
+  color: var(--focus);
+}
+
+.contacto img{
+  width: 1.5rem;
+}
+
+/* ----------- LISTADO - EVENTOS ------------- */
+
+#listado{
+  margin: 1rem;
+}
+
+.contListado{
+  margin: 1rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+
+/* ----------- DETALLES Y COMPRA ------------- */
+
+#detalles{
+  margin: 1rem;
+  justify-content: flex-start;
+}
+
+.infoDetalles{
+  align-items: flex-start;
+}
+
+.btnLeft{
+  justify-content: flex-end;
+}
+
+.table{
+  color: var(--white);
+  width: 100%;
+  margin: 1rem 0;
+}
+
+th, td{
+  padding: .5rem 0;
+  text-align: left;
+}
+
+th{
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+td{
+  color: var(--focus);
+  font-size: 1.5rem;
+}
+
+#cantTicket{
+  padding: 0;
+  text-align: center;
+}
+
+.total{
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  border-radius: 0.625rem;
+  background: #1E1E1E;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+#detalles figure{
+  height: 20vh;
+}
+
+.btnLeft{
+  justify-content: space-between;
+}
+
+.btnLeft img{
+  width: 2.5rem;
+}
+
+/* INPUT RADIO */
+input[type="radio"] {
+  opacity: 0;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.radio-img {
+  width: 8rem;
+  height: 8rem;
+  padding: .5rem;
+}
+
+.radio-container p{
+  text-align: center;
+  width: 9rem;
+}
+
+.radioOptions{
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#radioMP, #radioRP{
+  border: 2px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  transition: .5s ease;
+}
+
+#radioMP:checked + label, #radioRP:checked + label{
+  outline: none;
+  border-color: var(--focus);
+  border-radius: 10px;
+  box-shadow: 0 0 20px 10px rgba(143, 96, 0, 0.5);
+}
+
+/* VERIFICACION */
+
+.verificacion{
+  flex-direction: column;
+  margin: 4rem 0;
+  gap: 1rem;
+}
+
+.verificacion img{
+  width: 5rem;
+  border-radius: 100px;
+}
+
+/* FINALIZACION */
+
+.qr{
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#qrcode{
+  width: 12rem;
+}
+
+#codigo{
+  color: var(--focus);
 }
