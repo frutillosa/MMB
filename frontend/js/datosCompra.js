@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const eventoId = urlParams.get("evento");
 var evento = null;
 
+
 async function getDetallesEvento (){
   evento = await listarEventos(eventoId);
   console.log(evento);
@@ -14,7 +15,7 @@ async function getDetallesEvento (){
                   <img class="img" src="img/${evento['portada']}" alt="Portada">
               </figure>
   
-              <div class="infoDetalles flexcenter direction">
+              <div class="infoDetalles flexcenter">
                   <div class="fechaPrincipal">
                       ${fechaConvertida.dia}
                       <span class="mes">${fechaConvertida.mes}</span>
@@ -45,7 +46,7 @@ function comprarPasoUno (){
               <img class="img" src="img/${evento['portada']}" alt="Portada">
             </figure>
 
-            <div class="infoDetalles flexcenter direction">
+            <div class="infoDetalles flexcenter">
               <div class="fechaPrincipal">
               ${fechaConvertida.dia}
                 <span class="mes">${fechaConvertida.mes}</span>
