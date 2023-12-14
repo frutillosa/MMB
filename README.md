@@ -10,7 +10,10 @@ Lo que se recomienda es:
 
 ## Inicialización
 Abrir una nueva terminal (elegir bash, no powershell). Asegurarse de que la ubicación que muestre sea la que contiene el archivo JS que queremos ejecutar.
-Puede cambiarse de directorio en la terminal usando el comando:
+Se inicializa utilizando los siguientes comandos:
+```
+npm install (para instalar todas las dependencias)
+```
 
 ```
 cd nombre_directorio (carpeta donde se tiene el package.json)
@@ -35,3 +38,5 @@ El servidor ya está corriendo y listo para recibir requests. Puedes utilizar Po
 * POST /addNewEvento
 * GET /listEventos
 * DELETE /deleteEvento
+* GET /generarCodigoQR
+* POST /send-email
