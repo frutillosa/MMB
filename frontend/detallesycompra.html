@@ -9,8 +9,8 @@
     <link href="img/favicon.png" rel="icon" type="image/x-icon">
     <title>Montevideo Music Box - Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js">
-    </script>
+    <script src="/js/utiles.js"></script>
+    <script src="/js/datosCompra.js"></script>
 </head>
 
 <body>
@@ -33,112 +33,107 @@
 
         <!-- 1 DETALLES -->
         <section id="detalles">
-            <figure class="figure">
-                <img class="img" src="img/anthrax.png" alt="Mapa del Local">
-            </figure>
-
-            <div class="infoDetalles flexcenter direction">
-                <div class="fechaPrincipal">
-                    06
-                    <span class="mes">OCT</span>
-                </div>
-                <h1>Samurai</h1>
-                <p class="hora subtitulo">21:00</p>
-                <p>Samurai, la legendaria banda musical que fusiona la pasión del rock con la esencia de la tradición japonesa, creando un sonido totalmente único.</p>
-            </div>
-
-            <div class="total flexcenter">
-                <p class="subtitulo">TOTAL</p>
-                <p class="subtitulo">$$$$</p>
-            </div>
-
-            <div class="btnLeft flexcenter">
-                <a href="" class="btnPrincipal">Comprar</a>
-            </div>
+            <!-- <figure class="figure">
+                  <img class="img" src="img/${evento['portada']}" alt="Portada">
+              </figure>
+  
+              <div class="infoDetalles flexcenter direction">
+                  <div class="fechaPrincipal">
+                      ${fechaConvertida.dia}
+                      <span class="mes">${fechaConvertida.mes}</span>
+                  </div>
+                  <h1>${evento['nombre']}</h1>
+                  <p class="hora subtitulo">${fechaConvertida.hora}</p>
+                  <p>${evento['descripcion']}</p>
+              </div>
+  
+              <div class="btnLeft flexcenter">
+                  <a href="" class="btnPrincipal">Comprar</a>
+              </div> -->
         </section>
 
-        <hr>
+        <!-- 
+            <hr>
 
-        <!-- 2 COMPRA -->
+        <p> 2 COMPRA </p>
         <section id="detalles">
             <figure class="figure">
-                <img class="img" src="img/anthrax.png" alt="Mapa del Local">
+              <img class="img" src="img/${evento['portada']}" alt="Portada">
             </figure>
 
             <div class="infoDetalles flexcenter direction">
-                <div class="fechaPrincipal">
-                    06
-                    <span class="mes">OCT</span>
-                </div>
-                <h1>Samurai</h1>
-                <p class="hora subtitulo">21:00</p>
-                <p>Samurai, la legendaria banda musical que fusiona la pasión del rock con la esencia de la tradición japonesa, creando un sonido totalmente único.</p>
+              <div class="fechaPrincipal">
+              ${fechaConvertida.dia}
+                <span class="mes">${fechaConvertida.mes}</span>
+              </div>
+              <h1>${evento['nombre']}</h1>
+              <p class="hora subtitulo">${fechaConvertida.hora}</p>
+              <p>${evento['descripcion']}</p>
 
-                <!-- ACA IRIA TODO LO DE COMPRA DE LA ENTRADA -->
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Tipo de ticket</th>
-                            <th>Valor</th>
-                            <th>Cant.</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>General</td>
-                            <td>$$$$</td>
-                            <td>
-                                <select name="cantTicket" id="cantTicket" class="input">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>VIP</td>
-                            <td>$$$$</td>
-                            <td>
-                                <select name="cantTicket" id="cantTicket" class="input">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th>Tipo de ticket</th>
+                          <th>Valor</th>
+                          <th>Cant.</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>General</td>
+                          <td>$$$$</td>
+                          <td>
+                              <select name="cantTicket" id="cantTicket" class="input">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>VIP</td>
+                          <td>$$$$</td>
+                          <td>
+                              <select name="cantTicket" id="cantTicket" class="input">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                              </select>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
             </div>
 
             <div class="total flexcenter">
-                <p class="subtitulo">TOTAL</p>
-                <p class="subtitulo">$$$$</p>
+              <p class="subtitulo">TOTAL</p>
+              <p class="subtitulo">$$$$</p>
             </div>
 
             <div class="btnLeft flexcenter">
-                <a href="" class="btnPrincipal">Confirmar</a>
+              <a href="" class="btnPrincipal">Confirmar</a>
             </div>
         </section>
 
         <hr>
 
-        <!-- 3 FORM -->
+        <p> 3 FORM </p>
         <section id="detalles">
 
             <div class="infoDetalles">
@@ -186,7 +181,7 @@
 
         <hr>
 
-        <!-- 4 MEDIO DE PAGO -->
+        <p> 4 MEDIO DE PAGO </p>
         <section id="detalles">
 
             <div class="infoDetalles">
@@ -235,7 +230,7 @@
 
         <hr>
 
-        <!-- 5 VERIFICACION -->
+        <p> 5 VERIFICACION </p>
         <section id="detalles">
 
             <div class="infoDetalles">
@@ -269,7 +264,7 @@
 
         <hr>
 
-        <!-- 6 FINAL -->
+        <p> 6 FINAL </p>
         <section id="detalles">
 
             <div class="infoDetalles">
@@ -282,7 +277,9 @@
 
                 <div class="qr flexcenter">
                     <p id="ticket">General x 1</p>
-                    <div id="qrcode"></div>
+                    <div id="qrcode">
+                        
+                    </div>
                     <p id="codigo" class="subtitulo">#ERS1256</p>
                     <p class="subtitulo">Enviada con éxito</p>
                     <p class="detalles">Guarda la foto o realiza una screenshot para tener el código QR en el momento de entrar al evento. Se debe tener en cuenta que puede ser utilizado una única vez.</p>
@@ -291,9 +288,10 @@
             </div>
 
             <div class="flexcenter">
-                <a href="" class="btnSimple">Volver al inicio</a>
+                <a href="index.html" class="btnSimple">Volver al inicio</a>
             </div>
-        </section>
+        </section> 
+    -->
 
 
 

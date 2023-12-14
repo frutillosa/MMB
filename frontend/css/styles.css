@@ -18,9 +18,9 @@ main{
 }
 
 .flexcenter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .direction{
@@ -45,9 +45,9 @@ h2{
 
 h3{
   color: var(--white);
-  font-size: 36px;
+  font-size: 34px;
   text-transform: uppercase;
-  text-shadow: 0px 0px 5px #000;
+  text-shadow: 0px 0px 12px #000000;
 }
 
 p, .p{
@@ -62,6 +62,7 @@ a{
 .subtitulo{
   color: var(--white);
   font-size: 24px;
+  text-shadow: 0px 0px 12px #000000;
 }
 
 .detalles{
@@ -100,19 +101,22 @@ a{
 /* ------------ BOTONES ------------- */
 /* btn principal */
 .btnPrincipal {
+    width: 15rem;
     position: relative;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     padding: 0.5rem 1rem;
     margin: 1rem 0;
     background-color: var(--focus);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    gap: 10px;
+    color: var(--black);
     border: 2px solid #ffffff4d;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
     outline: none;
     overflow: hidden;
     font-size: 1.2rem;
@@ -254,7 +258,7 @@ form div{
 #header{
     background: center center no-repeat;
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
 }
 
 /* NAVBAR */
@@ -272,8 +276,7 @@ nav{
 
 .logo img{
     margin: 0.5rem 0;
-    width: 137px;
-    height: 66px;
+    width: 150px;
 }
 
 /* ------------ INDEX - PRINCIPAL ------------- */
@@ -286,7 +289,7 @@ nav{
     font-size: 3rem;
     text-align: center;
     line-height: 2.5rem;
-    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.5);
 
     width: 6rem;
     height: 6rem;
@@ -294,7 +297,11 @@ nav{
 
 .txtPrincipal{
     color: var(--white);
-    margin: 20vh 0 0 5vw;
+    margin: 20vh 1rem 1rem 1rem;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
 }
 
 .fechaPrincipal span{
@@ -308,9 +315,11 @@ nav{
   border-radius: 10px;
   background: var(--black);
   box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.50);
-  backdrop-filter: blur(10px);
   padding: 1rem;
+  justify-content: center;
+}
 
+#contDestacados{
   gap: 1rem;
 }
 
@@ -349,7 +358,6 @@ nav{
 .fechaDestacado span{
   font-size: 1.5rem;
 }
-
 
 /* ------------ INDEX - NUESTRA SALA ------------- */
 #nuestrasala{
@@ -449,19 +457,15 @@ footer{
 }
 
 #servicios{
-  gap: 1rem;
-  flex-direction: column;
-  flex: 0 0 0 500px;
-  flex-wrap: wrap;
   margin: 1rem;
+  gap: 1rem;
   text-align: center;
+  max-width: 90vw;
 }
 
 .contacto{
   gap: 1rem;
   flex-direction: column;
-  flex-shrink: 0;
-  flex-wrap: wrap;
   margin: 1rem;
   text-align: left;
 }
@@ -484,10 +488,9 @@ footer{
   margin: 1rem;
 }
 
-.contListado{
+#contListado{
   margin: 1rem;
-  flex-wrap: wrap;
-  flex-shrink: 0;
+  gap: 2rem;
 }
 
 
@@ -567,7 +570,6 @@ input[type="radio"] {
 .radio-img {
   width: 8rem;
   height: 8rem;
-  padding: .5rem;
 }
 
 .radio-container p{
@@ -580,18 +582,16 @@ input[type="radio"] {
   align-items: flex-start;
 }
 
-#radioMP, #radioRP{
-  border: 2px solid transparent;
-  border-radius: 10px;
+#MP, #RP{
+  border-radius: 20px;
   outline: none;
   transition: .5s ease;
 }
 
-#radioMP:checked + label, #radioRP:checked + label{
+#MP:checked + label, #RP:checked + label{
   outline: none;
-  border-color: var(--focus);
-  border-radius: 10px;
-  box-shadow: 0 0 20px 10px rgba(143, 96, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: inset 0px 0px 0px 20px var(--focus);
 }
 
 /* VERIFICACION */
@@ -619,5 +619,62 @@ input[type="radio"] {
 }
 
 #codigo{
-  color: var(--focus);
+  color: #E2A555;
+}
+
+
+/* ----------- LOS MEDIA QUERY ------------- */
+
+/* Media query para pantallas más grandes */
+@media screen and (min-width: 768px) {
+  #header{
+    height: 90vh;
+  }
+
+  header>div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1rem;
+  }
+
+  .direction{
+    flex-direction: row;
+  }
+
+  .flexcenter{
+    flex-wrap: wrap;
+  }
+
+  .eventoDestacado{
+    width: 45%;
+  }
+
+  #form, #info{
+    display: flex;
+    gap: 6vw;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  #form div, #info div{
+    max-width: 45vw;
+  }
+
+  #form figure img, #info figure img{
+    width: 45vw;
+    object-fit: contain;
+  }
+
+  .txtServicios{
+    width: 27vw;
+  }
+
+  .eventoDestacado{
+    width: 45vw;
+  }
+
+  .txtFooter{
+    max-width: 45vw;
+    text-align: left;
+  }
 }

@@ -9,6 +9,8 @@ const schemaEvento = new Schema({
   descripcion: String,
   img: String,
   portada: String,
+  general: Number,
+  vip: Number
 });
 
 export const modelEvento = model('Evento', schemaEvento);

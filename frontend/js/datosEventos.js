@@ -1,39 +1,53 @@
+// COSAS QUE SE CARGAN EN EL EVENTOS
 window.onload = () => {
-    fetch('http://localhost:3000/listEventos', )
-    .then(response => response.json())
-    .then(data => {
-        console.log('Listado de eventos:', data);
-        // ACA VAN LAS COSAS QUE TIENEN QUE CARGAR
-        getEventos(data.message);
-    })
-    .catch(error => {
-        console.error('Error al listar eventos:', error);
-    });
+    fetch('https://mmb-backend.onrender.com/listEventos')
+    //fetch('http://localhost:3000/listEventos')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Listado de eventos:', data);
+            // Array de los eventos
+            getListado(data.message);
+
+        })
+        .catch(error => {
+            console.error('Error al listar eventos:', error);
+        });
 };
 
 // OBTENER EVENTOS
-const getEventos = (data) => {
+const getListado = (eventos) => {
+    const contListado = document.getElementById('contListado');
 
-    let html = "";
-    for (let i = 0; i < data.length; i++)
-    {n 
-        const element = data[i];
-        console.log(element);
-        html += `
-        <div class="eventoDestacado" style="background-image: url(${data.img[i]}); background-size: cover;">
+    contListado.innerHTML = '';
+
+    for (let i = 0; i < eventos.length; i++) {
+        const evento = eventos[i];
+        if (!evento) continue;
+
+        const fechaConvertida = convertirFecha(evento['fecha']);
+
+        contListado.innerHTML += `
+        <div class="eventoDestacado" style="background-image: url(img/${evento['img']}); background-size: cover;">
             <div class="txtDestacado flexcenter">
                 <div class="fechaDestacado flexcenter">
-                    06
-                    <span>OCT</span>
+                    ${fechaConvertida.dia}
+                    <span>${fechaConvertida.mes}</span>
                 </div>
                 <div>
-                    <h3 id="nombre">${data.titulo[i]}</h3>
-                    <p class="subtitulo" id="hora">21:00</p>
+                    <h3 id="nombre">${evento['nombre']}</h3>
+                    <p class="subtitulo" id="hora">${fechaConvertida.hora}</p>
                 </div>
             </div>
         </div>
         `;
     }
 
-    document.getElementsByClassName('contListado').innerHTML = html;
 };
+
+const filtroFecha = document.getElementById('filtrosFecha');
+
+filtroFecha.addEventListener('change', () => {
+    const filtroSeleccionado = filtroFecha.value;
+    const eventosFiltrados = filtrarEventos(todosLosEventos, filtroSeleccionado);
+    getListado(eventosFiltrados);
+});

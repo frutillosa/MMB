@@ -9,10 +9,8 @@
     <link href="img/favicon.png" rel="icon" type="image/x-icon">
     <title>Montevideo Music Box - Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js">
-    </script>
-    <script src="../MMB-Frontend/js/convertidores.js"></script>
-    <script src="../MMB-Frontend/js/datosIndex.js"></script>
+    <script src="/js/utiles.js"></script>
+    <script src="/js/datosIndex.js"></script>
 </head>
 
 <body>
@@ -38,41 +36,19 @@
         <!-- EVENTOS -->
         <section id="destacados" class="flexcenter direction">
             <h2>PROXIMOS EVENTOS</h2>
-            <div class="eventoDestacado" style="background-image: url(img/anthrax.png); background-size: cover;">
-                <div class="txtDestacado flexcenter">
-                    <div class="fechaDestacado flexcenter">
-                        06
-                        <span>OCT</span>
-                    </div>
-                    <div>
-                        <h3 id="nombre">Titulo</h3>
-                        <p id="hora">21:00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="eventoDestacado" style="background-image: url(img/samurai.png); background-size: cover;">
-                <div class="txtDestacado flexcenter">
-                    <div class="fechaDestacado flexcenter">
-                        06
-                        <span>OCT</span>
-                    </div>
-                    <div>
-                        <h3 id="nombre">Titulo</h3>
-                        <p id="hora">21:00</p>
-                    </div>
-                </div>
-            </div>
-            <a class="btnPrincipal" href="">ver más eventos</a>
+            <article id="contDestacados" class="flexcenter direction">
+                <!-- getDestacados -->
+            </article>
+            <a class="btnPrincipal" href="eventos.html"> Ver más eventos </a>
         </section>
 
         <!-- NUESTRA SALA -->
         <section id="nuestrasala">
             <div class="txtSala flexcenter direction">
                 <h2>NUESTRA SALA</h2>
-                <h3>EVENTOS ÚNICOS</h3>
                 <p>Esta versátil sala de eventos musicales ofrece un espacio excepcional que puede ser adaptado para una amplia variedad de ocasiones. Ya sea para conciertos en vivo, bailes, convenciones o cualquier otro evento especial, nuestro lugar se
                     transforma según sus necesidades. Equipado con tecnología de vanguardia y una acústica excepcional, garantizamos una experiencia inolvidable en cada ocasión.</p>
-                <a class="btnPrincipal" href="">ver más</a>
+                <a class="btnPrincipal" href="lasala.html">ver más</a>
             </div>
             <div class="mapa">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.0236003187965!2d-56.15376432365263!3d-34.88075367796451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80709572aaf5%3A0xfd883d14b34d36f1!2sMontevideo%20Music%20Box!5e0!3m2!1ses-419!2suy!4v1701698860856!5m2!1ses-419!2suy"

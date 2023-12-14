@@ -1,10 +1,13 @@
 import mongoose from 'mongoose';
+import { config } from 'dotenv';
+
+config();
+
+const uri = process.env.URL_DATABASE;
 
 // URL from Mongodb
-const urlDatabase = 'mongodb+srv://Monguito:12341234@grupo.1bbkcid.mongodb.net/?retryWrites=true&w=majority';
-
 const connectDB = () => {
-  mongoose.connect(urlDatabase,{})
+  mongoose.connect(uri,{})
   .then(() => {
     console.log('Conexión exitosa a la base de datos')})
   .catch((error) => {
